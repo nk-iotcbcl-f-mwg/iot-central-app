@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="azure-iot-central-application-%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3">Azure IoT Central Application ハンズオン</h1>
+<h2 id="1-%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3-%E5%86%85%E5%AE%B9">1. ハンズオン 内容</h2>
+<p>Azure IoT Central Applicationを利用して、<br>
+IoT機器からの情報収集・可視化・アラート通知機能を構築します。</p>
+<ul>
+<li>
+<p>デバイスから上がってくる温度・湿度・気圧を管理する。</p>
+<ul>
+<li>デバイスの接続、テレメトリの受信</li>
+<li>データの可視化 (グラフ表示)</li>
+<li>ダッシュボードの作成</li>
+</ul>
+<img src="img/006/007.png" width=50%>
+</li>
+<li>
+<p>温度が35℃を超えたら「熱中症注意」のメールを送信。</p>
+<ul>
+<li>ルールの設定</li>
+<li>アクションの設定</li>
+</ul>
+<img src="img/007/008.png" width=50%>
+</li>
+</ul>
+<h2 id="2-iot-central-application%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2. IoT Central Applicationを使ってみよう</h2>
+<p>IoT Centralは、Azureが展開しているIoTのSaaS(Software as a Service)です。</p>
+<p>IoT Centralでは、IoT機器からの情報収集、蓄積、可視化、アラートなどの機能を<br>
+SaaSとして提供しています。</p>
+<p>IoTを始めるにあたって、典型的なパターンは以下のものかと思います。</p>
+<ul>
+<li>IoT機器にクラウド接続アプリをデプロイ。</li>
+<li>クラウドに上がってきたデータの蓄積(データベース等)</li>
+<li>蓄積データの可視化 (データ表示アプリの作成)</li>
+<li>送信データによるアクション(異常検知時のメール送信)</li>
+</ul>
+<p>この場合、</p>
+<ul>
+<li>データベースを準備</li>
+<li>データの可視化アプリを作成</li>
+<li>イベント検知時のアクション作成</li>
+</ul>
+<p>が必要であり、個々のクラウドサービスを連携させたり、アプリの開発が必要でした。</p>
+<p>しかし、IoT Centralではデバイス接続、蓄積・可視化、分析、異常検知やそれに対するアクション設定、<br>
+デバイスへのコマンド送信など、IoTを始めるにあたり必要な機能が簡単に使えるようになっています。<br>
+デバイス側の接続アプリの作成・デプロイは必要ですが、それ以外はコーディングなしで利用できます。</p>
+<h3 id="2-1-iot-central-application%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%97%E3%82%88%E3%81%86">2-1. IoT Central Applicationを構築しよう</h3>
+<p>では、さっそくIoT Centralを体験してみましょう。
+Azure PotalからIot Centralを作成します。</p>
+<ol>
+<li>
+<p>Azure Potalを開きます。</p>
+</li>
+<li>
+<p>画面左のメニューから、「リソースの作成」をクリック。<br>
+<img src="img/001/001.png">
+<br></p>
+</li>
+<li>
+<p>検索フィールドに<code>IoT Central Application</code>を入力し検索。<br>
+<img src="img/001/002.png">
+<br></p>
+</li>
+<li>
+<p>「IoT Central アプリケーション」が表示されるのでクリック。<br>
+<img src="img/001/003.png">
+<br></p>
+<p>「作成」をクリックします。<br>
+<img src="img/001/004.png">
+<br></p>
+</li>
+<li>
+<p>必要な情報を入力し「作成」をクリックします。</p>
+<ol>
+<li>リソース名：「日付：yyyymmdd&gt;-&lt;席番号&gt;-iotc」<br>
+(※アプリケーションURLも併せて自動入力されます。)</li>
+<li>サブスクリプション：ご自身のサブスクリプションを選択</li>
+<li>リソースグループ：<code>新規作成</code>をクリックし、「iot-central-hands-on」とする。</li>
+<li>テンプレート：「カスタムアプリケーション」</li>
+<li>場所：米国東部</li>
+</ol>
+<br>
+<img src="img/001/005.png">
+<br>
+</li>
+<li>
+<p>作成には少し時間がかかります。焦らず待ちましょう。<br>
+作成が完了すると下記の通知が表示されますので、<br>
+「リソースに移動」をクリックします。</p>
+<img src="img/001/006.png">
+<br>
+</li>
+<li>
+<p>Iot Central Applicationの概要画面が表示されますので、<br>
+<code>IoT Central アプリケーションのURL</code>をクリックしてみましょう。</p>
+<img src="img/001/007.png" width=50%>
+<br>
+</li>
+<li>
+<p>IoT Central Applicationが表示されます。
+<br><br>
+<img src="img/001/008.png" width=50%></p>
+</li>
+</ol>
+<h3 id="2-2-%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2-2. デバイステンプレート作ってみよう</h3>
+<p>デバイステンプレートは、接続する機器のテンプレートです。</p>
+<p>接続する機器も様々です。</p>
+<ul>
+<li>Arduino</li>
+<li>Raspberry Pi</li>
+</ul>
+<p>といった機器の違いもあれば、同じ機種でも、用途によろ通信内容にも違いがあります。</p>
+<p>接続機器は1台とは限りません。何百台もの機器を展開する場合もあります。<br>
+その際、一台一台設定していては、きりがないですね。</p>
+<p>そこで、テンプレートがあるわけです。</p>
+<p>デバイステンプレートは接続機器の、</p>
+<ul>
+<li>通信内容</li>
+<li>制御のルール</li>
+<li>送信データのグラフ化・表示内容</li>
+</ul>
+<p>などが設定できます。</p>
+<p>では、早速作ってみましょう。</p>
+<ol>
+<li>
+<p>画面左のメニューから「デバイステンプレート」をクリックします。<br>
+<img src="img/002/001.png">
+<br></p>
+</li>
+<li>
+<p>画面右上の「＋ (新規)」をクリックします。<br>
+<img src="img/002/002.png">
+<br></p>
+</li>
+<li>
+<p>代表的な機器のテンプレートが表示されます。<br>
+今回は「カスタム」を選択します。<br>
+<img src="img/002/003.png">
+<br></p>
+</li>
+<li>
+<p>テンプレート名を入力しましょう。<br>
+今回は「my-template」とします。<br>
+入力したら「作成」をクリックします。<br>
+<img src="img/002/004.png">
+<br></p>
+</li>
+<li>
+<p>テンプレートが作成されました。ここから、接続する機器に関する設定を行っていきます。<br>
+先ずは「測定」から設定します。この「測定」には機器から送られてくるデータを登録します。<br>
+例えば、センサーで検知した温度や湿度などです。<br>
+<img src="img/002/005.png">
+<br></p>
+<p>「測定」タブを選択し、「＋新規」をクリックしてください。<br>
+表示されたメニューから「テレメトリ」を選択します。<br>
+<img src="img/002/006.png">
+<br></p>
+</li>
+<li>
+<p>テレメトリは、機器から送られてくる計測データです。<br>
+IoT機器からは、センサーで計測したデータをJSON形式で送信します。</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// 送信例</span>
+{
+    <span class="hljs-string">"temperature"</span>: <span class="hljs-number">28.0234</span>,    <span class="hljs-comment">// 温度</span>
+    <span class="hljs-string">"humidity"</span>: <span class="hljs-number">56.2934</span>,       <span class="hljs-comment">// 湿度</span>
+    <span class="hljs-string">"pressure"</span>: <span class="hljs-number">989.2229</span>,      <span class="hljs-comment">// 気圧</span>
+    <span class="hljs-string">"assetloc"</span>: {              <span class="hljs-comment">// 場所</span>
+        <span class="hljs-string">"lon"</span>: <span class="hljs-number">140.2220</span>,       <span class="hljs-comment">// 経度</span>
+        <span class="hljs-string">"lat"</span>: <span class="hljs-number">39.0023</span>         <span class="hljs-comment">// 緯度</span>
+    }
+}
+</div></code></pre>
+<p>ここでは、送信されてくるデータの中から、蓄積・表示したい項目を登録します。
+今回は、デバイスから上記の温度、湿度が送られてくるものとしましょう。</p>
+<p>では、温度を設定してみます。</p>
+<ul>
+<li>
+<p>Display Name : 温度</p>
+<ul>
+<li>画面に表示する際の「表示名」です。</li>
+</ul>
+</li>
+<li>
+<p>フィールド名 : temperature</p>
+<ul>
+<li>デバイスから送られてくるデータの項目名です。</li>
+</ul>
+</li>
+<li>
+<p>単位：℃</p>
+<ul>
+<li>送られてくるデータの単位です。</li>
+</ul>
+</li>
+<li>
+<p>最小値：-20</p>
+<ul>
+<li>送られてくるデータの最小値です。<br>
+この値を下回る値は、有効データとして扱われません。</li>
+</ul>
+</li>
+<li>
+<p>最大値：50</p>
+<ul>
+<li>送られてくるデータの最大値です。<br>
+この値を上回る値は、有効データとして扱われません。</li>
+</ul>
+</li>
+<li>
+<p>小数点以下桁数：2</p>
+<ul>
+<li>小数で送信されてくる場合の有効桁数です。(四捨五入されます。)<br>
+グラフでのデータ表示時に使用されます。
+未指定の場合は、送信データの桁数で扱われます。</li>
+</ul>
+</li>
+<li>
+<p>カラー： (赤)</p>
+<ul>
+<li>グラフ表示時のカラーを指定します。</li>
+</ul>
+</li>
+</ul>
+<br>
+<img src="img/002/007.png">
+<br>
+<p>入力が完了したら、「保存」をクリックし保存します。<br>
+<img src="img/002/008.png">
+<br></p>
+</li>
+<li>
+<p>同様に、湿度・気圧を定義しましょう。</p>
+<p><strong>湿度</strong></p>
+<ul>
+<li>「+ 新規」～「テレメトリ」</li>
+<li>Display Name : 湿度</li>
+<li>フィールド名 : humidity</li>
+<li>単位：%</li>
+<li>最小値：0</li>
+<li>最大値：100</li>
+<li>小数点以下桁数：2</li>
+<li>カラー： (青)</li>
+<li>入力が完了したら、「保存」をクリックし保存します。</li>
+</ul>
+<img src="img/002/009.png">
+<br>
+<p><strong>気圧</strong></p>
+<ul>
+<li>「+ 新規」～「テレメトリ」</li>
+<li>Display Name : 気圧</li>
+<li>フィールド名 : pressure</li>
+<li>単位：hPa</li>
+<li>最小値：800</li>
+<li>最大値：1200</li>
+<li>小数点以下桁数：2</li>
+<li>カラー： (オレンジ)</li>
+<li>入力が完了したら、「保存」をクリックし保存します。</li>
+</ul>
+<img src="img/002/010.png">
+<br>
+</li>
+<li>
+<p>次に場所を設定します。</p>
+<ul>
+<li>
+<p>「+ 新規」～「場所」<br>
+<img src="img/002/011.png"></p>
+</li>
+<li>
+<p>Display Name : 場所</p>
+</li>
+<li>
+<p>フィールド名 : assetloc</p>
+</li>
+</ul>
+<img src="img/002/012.png">
+<ul>
+<li>入力が完了したら、「保存」をクリックし保存します。</li>
+</ul>
+<br>
+</li>
+<li>
+<p>これで受信データの表示ができます。<br>
+画面上には、温度と湿度のシミュレーションデータが表示されています。<br>
+まだデバイスは接続していませんが、IoT Centralが自動でシミュレーション<br>
+データを生成します。  このデータがあることで、画面のイメージが<br>
+しやすかったのではないでしょうか。<br>
+<img src="img/002/013.png" width=50%></p>
+</li>
+</ol>
+<h3 id="2-3-%E3%83%80%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9C%E3%83%BC%E3%83%89%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%97%E3%82%88%E3%81%86">2-3. ダッシュボードを設定しよう</h3>
+<p>受信データの設定が終わったところで、ダッシュボードを設定してみましょう。<br>
+ダッシュボードは、データの概要を一覧表示する画面(機能)です。</p>
+<p>今回は以下のような画面を構成します。</p>
+<ul>
+<li>温度・湿度のグラフ表示</li>
+<li>過去30分間の温度・湿度の平均</li>
+<li>機器がある場所を示すマップ</li>
+</ul>
+<ol>
+<li>
+<p>「ダッシュボード」タブを表示します。<br>
+<img src="img/003/001.png">
+<br></p>
+</li>
+<li>
+<p>「温度」を表示する折れ線グラフを追加します。<br>
+画面左の「折れ線グラフ」を選択し、以下の入力をします。<br>
+<img src="img/003/003.png"></p>
+<ul>
+<li>タイトル：温度</li>
+<li>凡例を表示する：On</li>
+<li>X軸の表示：On</li>
+<li>Y軸の表示：On</li>
+<li>時間の範囲：過去30分</li>
+<li>測定：「温度」を選択</li>
+<li>入力が完了したら「保存」をクリック。</li>
+</ul>
+ <img src="img/003/004.png">
+ <br>
+</li>
+<li>
+<p>「湿度」を表示する折れ線グラフを追加します。<br>
+画面左の「折れ線グラフ」を選択し、以下の入力をします。</p>
+<ul>
+<li>タイトル：湿度</li>
+<li>凡例を表示する：On</li>
+<li>X軸の表示：On</li>
+<li>Y軸の表示：On</li>
+<li>時間の範囲：過去30分</li>
+<li>測定：「湿度」を選択</li>
+<li>入力が完了したら「保存」をクリック。</li>
+</ul>
+ <img src="img/003/005.png">
+ <br>
+</li>
+<li>
+<p>温度の平均値表示を追加します。<br>
+画面左の「KPI」を選択し、以下の入力をします。<br>
+<img src="img/003/006.png"></p>
+<ul>
+<li>タイトル：平均温度</li>
+<li>時間の範囲：過去30分</li>
+<li>測定タイプ：テレメトリ</li>
+<li>測定：温度</li>
+<li>入力が完了したら「保存」をクリック。</li>
+</ul>
+ <img src="img/003/007.png">
+ <br>
+</li>
+<li>
+<p>湿度の平均値表示を追加します。<br>
+画面左の「KPI」を選択し、以下の入力をします。</p>
+<ul>
+<li>タイトル：平均湿度</li>
+<li>時間の範囲：過去30分</li>
+<li>測定タイプ：テレメトリ</li>
+<li>測定：湿度</li>
+<li>入力が完了したら「保存」をクリック。</li>
+</ul>
+ <img src="img/003/008.png">
+ <br>
+</li>
+<li>
+<p>機器の場所を表示するマップを追加します。<br>
+画面左の「マップ」を選択し、以下の入力をします。<br>
+<img src="img/003/009.png"></p>
+<ul>
+<li>タイトル：設置場所</li>
+<li>場所：場所</li>
+<li>状態の測定：状態の測定を選択する。</li>
+<li>場所の履歴を表示する：Off</li>
+<li>入力が完了したら「保存」をクリック。</li>
+</ul>
+ <img src="img/003/010.png">
+ <br>
+</li>
+</ol>
+<p>追加したグラフやデータの表示位置は、自由に変更できます。<br>
+自分好みの配置にしてみましょう。<br>
+<img src="img/003/011.png" width=50%>
+<br></p>
+<h2 id="3-%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%82%92%E3%81%A4%E3%81%AA%E3%81%84%E3%81%A7%E3%81%BF%E3%82%88%E3%81%86">3. デバイスをつないでみよう</h2>
+<p>では、機器を接続してみましょう。</p>
+<p>IoT機器をIoT Centralに接続するには、以下の手続きが必要です。</p>
+<ul>
+<li>IoT Centralに接続する機器を登録します。</li>
+<li>IoT機器がIoT Centralに接続するために必要な接続情報をAzureポータルから取得します。</li>
+<li>IoT Centralに接続しデータを送信するアプリを作成。接続に必要な情報は、このアプリに埋め込みます。</li>
+<li>IoT機器にアプリをデプロイし、起動します。</li>
+</ul>
+<h3 id="3-1-%E6%8E%A5%E7%B6%9A%E6%A9%9F%E5%99%A8%E3%82%92%E7%99%BB%E9%8C%B2%E3%81%97%E3%82%88%E3%81%86">3-1. 接続機器を登録しよう</h3>
+<p>IoT Centralに接続機器を登録します。</p>
+<ol>
+<li>
+<p>画面左のメニューから「デバイス」を選択します。</p>
+<img src="img/004/001.png">
+<br>
+</li>
+<li>
+<p>先程作成した「my-template」が表示されています。<br>
+右側には、このテンプレートを利用した接続機器が表示されます。<br>
+まだ機器の登録を行っていませんが、既に<br>
+「my-template-1 (シミュレート済み)」<br>
+が存在しています。 これはIoT Centralが自動で作成したものです。<br>
+このシミュレート済み機器があったので、テンプレート作成時にデータが表示されました。<br>
+実際の機器を登録する場合には、「＋」をクリックし「実際」をクリックします。<br>
+<img src="img/004/002.png" width=50%>
+<br></p>
+</li>
+<li>
+<p>「新しいデバイス作成」ダイアログが表示されます。<br>
+デバイスIDとデバイス名が表示されていると思います。<br>
+今回は、これをこのまま使用しましょう。<br>
+「作成」をクリックします。<br>
+<img src="img/004/003.png">
+<br></p>
+</li>
+<li>
+<p>デバイス登録が完了すると、画面が切り替わります。<br>
+これで、接続デバイスが登録されました。<br>
+<img src="img/004/004.png" width=50%>
+<br></p>
+</li>
+</ol>
+<h3 id="3-2-%E6%8E%A5%E7%B6%9A%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AA%E6%83%85%E5%A0%B1%E3%82%92%E5%8F%96%E5%BE%97%E3%81%97%E3%82%88%E3%81%86">3-2. 接続に必要な情報を取得しよう</h3>
+<p>デバイスをIoT Centralに接続するには、セキュリティを担保するため認証が必要になります。</p>
+<p>IoT Central では</p>
+<ul>
+<li>SAS (Shared Access Signature：共有アクセス署名)</li>
+</ul>
+<p>または</p>
+<ul>
+<li>X.509証明書</li>
+</ul>
+<p>を利用した接続ができます。</p>
+<p>今回は、SASを利用します。</p>
+<ol>
+<li>
+<p>画面右上の「接続」をクリックします。<br>
+<img src="img/005/001.png">
+<br></p>
+</li>
+<li>
+<p>デバイス接続情報のダイアログが表示されます。<br>
+スコープID、デバイスIDを控えてください。<br>
+<img src="img/005/003.png">
+<br></p>
+</li>
+<li>
+<p>資格情報のSASタブを選択してください。<br>
+主キーとセカンダリキーが表示されていますので、それぞれ控えてください。</p>
+<img src="img/005/004.png">
+<br>
+<p>控えたら、「閉じる」をクリックしダイアログを閉じてください。</p>
+<br>
+</li>
+<li>
+<p>これらの情報から接続文字列を作成します。
+以下のサイトにアクセスしてください。</p>
+<p><a href="https://dpsgen.z8.web.core.windows.net/">https://dpsgen.z8.web.core.windows.net/</a></p>
+<p>先程控えた、スコープID、デバイスID、主キーを入力し、<br>
+「Get Connection String」をクリックします。<br>
+しばらくすると接続文字列が表示されますので、控えておいてください。</p>
+<img src="img/005/005.png">
+<br>
+</li>
+</ol>
+<details>
+<summary>参考：接続文字列の生成</summary>
+<p>接続文字列の生成には、Node.jsを利用したdps-keygenを利用しています。<br>
+詳しくは以下を参照してください。</p>
+<blockquote>
+<p>Azure IoT Central アプリケーションに接続するためのデバイスの接続文字列を生成する<br>
+https://docs.microsoft.com/ja-jp/azure/iot-central/howto-generate-connection-string</p>
+</blockquote>
+</details>
+<br>
+<h3 id="3-3-iot%E6%A9%9F%E5%99%A8%E3%81%AB%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E3%81%99%E3%82%8B%E6%8E%A5%E7%B6%9A%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E6%BA%96%E5%82%99%E3%81%97%E3%82%88%E3%81%86">3-3. IoT機器にデプロイする接続アプリを準備しよう</h3>
+<p>さて、IoT Centralに接続するための準備が整いました。</p>
+<p>あとは、デバイスに接続アプリをデプロイするだけです。</p>
+<p>本来であれば、ArduinoやRaspberry PiをはじめとしたIoT機器を接続したいところですが、<br>
+今回は、Raspberry Piのシミュレータを実機にみたてて接続してみます。</p>
+<p>先ずは、シミュレータにアクセスしてみましょう。
+以下にアクセスしてください。</p>
+<p><a href="https://azure-samples.github.io/raspberry-pi-web-simulator/#Getstarted">https://azure-samples.github.io/raspberry-pi-web-simulator/#Getstarted</a></p>
+<img src="img/006/001.png" width=50%>
+<br>
+<p>これは、Node.js/JavaScriptで書かれています。</p>
+<details>
+<summary>参考(1)：Raspberry Pi オンライン シミュレーター</summary>
+<blockquote>
+<p>参考：Raspberry Pi オンライン シミュレーターの Azure IoT Hub への接続 (Node.js)<br>
+https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-raspberry-pi-web-simulator-get-started</p>
+</blockquote>
+</details>
+<br>
+<p>このシミュレータでは、以下の制御をシミュレートします。</p>
+<ul>
+<li>センサー (BME280) を接続し、温度・湿度・気圧を測定。</li>
+<li>AzureのIoT HubやIoT Centralに接続し、テレメトリを送信。</li>
+<li>LEDを接続し、データ送信時に点灯させる。</li>
+</ul>
+<details><summary>参考(2)：シミュレータのコード内容</summary>
+<p>では、少しコードを見てみましょう。</p>
+<p>ポイントをかいつまんで説明してみます。</p>
+<p>Raspberry Piには</p>
+<ul>
+<li>GPIO (汎用入出力：General-Purpose Input/Output)</li>
+</ul>
+<p>と呼ばれる、ピンが備わっています。<br>
+このピンにセンサーをつないで、データを取得します。<br>
+もちろんUSB経由でデータを取得できるものもありますが、このGPIOを使うことが多いですね。<br>
+このGPIOにアプリ側からアクセスには、I2C (Inter-Integrated Circuit) と呼ばれる<br>
+シリアル通信方式でアクセスします。</p>
+<p>機械に興味がない人には、少し面倒な話でしたが、こうした事を踏まえて見てみましょう。</p>
+<p>冒頭に定数定義があります。
+azure関連のライブラリや、センサーとして使用するBME280に関するライブラリを参照しています。
+また、I2Cに関する記載もありますね。</p>
+<p>ここで、覚えておいてほしいのは、<code>azure-iot-device</code>です。
+このライブラリを使用してAzureとの接続を行います。
+AzureではIoT機器の接続に関して、SDKを用意しています。
+こうしたSDKを利用することで、面倒なプログラミングをせずとも<br>
+容易にサービスを利用できるようになります。
+サンプルも公開されていますので、うまく活用してください。
+とりあえず試して結果を得るまでの速さを体験してください。</p>
+<blockquote>
+<p>Azure IoT Hub SDK の概要と使用方法<br>
+https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-devguide-sdks</p>
+</blockquote>
+<p>さて、メソッドが定義されていますが主要なメソッドの概要を説明しましょう。
+まず23行目の<code>getMessage()</code>ですが、SensorであるとかJSONと記載があります。
+ここでは、センサー情報を読み取りテレメトリとして送信するJSONを作成しています。
+温度や湿度のデータが記載されていますね。</p>
+<p>次に、39行目の<code>sendMessage()</code>ですが、先程の<code>getMessage()</code>でJSONを取得し、
+46行目の<code>client.sendEvent()</code>にてAzure側に送信しています。
+この<code>client</code>が何者かは後程出てきます。</p>
+<p>57行目からの<code>onStart()</code>と<code>onStop()</code>は開始コマンド及び停止コマンドに対するコールバックになります。
+これも後で関連部分が出てきます。</p>
+<p>79行目の<code>receiveMessageCallback()</code>ですが、これはクラウドからメッセージを受信したさいのコールバックになります。
+受信したメッセージをコンソールに表示します。</p>
+<p>99～108行目にかけては、センサー関連の処理を実施しています。
+実際に利用するセンサーによって、こうした実装は異なります。
+私の経験では、メーカーが利用に向けたサンプルコードを公開していることが
+多いので、そうしたモノから引用することが多いです。</p>
+<p>さて、111行目あたりからが重要です。
+ここでは、IoT Hubのデバイスクライアントを生成しています。
+5行目でazure-iot-deviceのクライアントを参照していますが、
+このクライアントを生成しています。
+<code>fromConnectionString()</code>メソッドに、接続文字列とプロトコルを渡していますね。</p>
+<p>接続文字列は15行目に定数として定義しています。
+設定値は<code>[Your IoT hub device connection string]</code>となっていますが、
+もうお気づきですね、これを先程作成したIoT Centralへの接続文字列に置き換えます。
+なお、プロトコルは7行目でMqttに設定しています。
+MQTT(Message Queueing Telemetry Transport)は、
+「 一つが小さい」メッセージを「大量」に「低遅延」「双方向」で通信することにむいています。
+まさにIoT向けですね。
+Azureでは他にもAMQPにも対応しています。
+時間があれば調べてみてください。</p>
+<p>さぁ、ざっと見てみましたが、ぱっと見渡せる量のコーディングで通信ができるなんてすごいですね。
+早速つないで見ましょう。</p>
+</details>
+<br>
+<p>コードを部分的に修正します。</p>
+<ol>
+<li>接続文字列を記載しましょう。<br>
+15行目の<code>[Your IoT hub device connection string]</code>の部分に、<br>
+先程控えておいた<strong>接続文字列</strong>を埋め込んでください。</li>
+</ol>
+<br>
+<ol start="2">
+<li>
+<p>次に、送信データの作成部分を修正します。</p>
+<p>機器からは、センサーで計測したデータを
+下記形式のJSONで送信することを想定しています。</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// 送信例</span>
+{
+    <span class="hljs-string">"temperature"</span>: <span class="hljs-number">28.0234</span>,    <span class="hljs-comment">// 温度</span>
+    <span class="hljs-string">"humidity"</span>: <span class="hljs-number">56.2934</span>,       <span class="hljs-comment">// 湿度</span>
+    <span class="hljs-string">"pressure"</span>: <span class="hljs-number">989.2229</span>,      <span class="hljs-comment">// 気圧</span>
+    <span class="hljs-string">"assetloc"</span>: {              <span class="hljs-comment">// 場所</span>
+        <span class="hljs-string">"lon"</span>: <span class="hljs-number">140.2220</span>,       <span class="hljs-comment">// 経度</span>
+        <span class="hljs-string">"lat"</span>: <span class="hljs-number">39.0023</span>         <span class="hljs-comment">// 緯度</span>
+    }
+}
+</div></code></pre>
+<p>23行目からの<code>getMessage()</code>メソッドを見てみましょう。<br>
+ここで送信メッセージを作成しています。<br>
+温度と湿度は設定されていますが、気圧と位置情報がありませんね。<br>
+以下のように変更しましょう。</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getMessage</span>(<span class="hljs-params">cb</span>) </span>{
+    messageId++;
+    sensor.readSensorData()
+    .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+ 	   cb(<span class="hljs-built_in">JSON</span>.stringify({
+ 		   <span class="hljs-attr">messageId</span>: messageId,
+ 		   <span class="hljs-attr">deviceId</span>: <span class="hljs-string">'Raspberry Pi Web Client'</span>,
+ 		   <span class="hljs-attr">temperature</span>: data.temperature_C,
+ 		   <span class="hljs-attr">humidity</span>: data.humidity,                     <span class="hljs-comment">// 末尾に , を追加。</span>
+ 		   pressure: data.pressure_hPa * <span class="hljs-number">100</span>,           <span class="hljs-comment">// 湿度を追加</span>
+ 		   assetloc: {<span class="hljs-attr">lon</span>: <span class="hljs-number">140.329948</span>, <span class="hljs-attr">lat</span>: <span class="hljs-number">37.395753</span>}  <span class="hljs-comment">// 位置情報を追加</span>
+ 		}), data.temperature_C &gt; <span class="hljs-number">30</span>);
+ 	})
+ 	.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+ 		<span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Failed to read out sensor data: '</span> + err);
+ 	});
+ }
+</div></code></pre>
+</li>
+</ol>
+<p>これで準備ができました。</p>
+<p>実行してみましょう。</p>
+<p>「Run」をクリックすると動き始めますので、クリックしてください。</p>
+<img src="img/006/002.png">
+<br>
+<br>
+<p>LEDが点灯し、画面右下のコンソールにメッセージが表示されていると思います。</p>
+<img src="img/006/004.png">
+<br>
+<img src="img/006/005.png">  
+<br>
+<p>IoT Central Applicationの画面に戻りましょう。<br>
+「デバイス」から、登録した機器(実際の機器)を選択してください。</p>
+<p>デバイスの「測定」画面が表示されると思いますが、グラフが表示されていますか？<br>
+データがIoT Centralに届くと、プロットされると思います。</p>
+<p>Raspberry Piシミュレータは、ランダムな値を送ってくるのでばらつきがありますが<br>
+時間とともにどんどんプロットされます。</p>
+<img src="img/006/006.png" width=50%>
+<br>
+<p>では、「ダッシュボード」を見てみましょう。
+グラフや平均値などの表示はどうでしょうか。</p>
+<img src="img/006/007.png" width=50%>
+<br>
+<p>マップですが、画面右側のボタンの一番下にある「始点」ボタンをクリックしてみてください。<br>
+先程設定した位置情報は、FCSの位置なのですが、そのあたりにマーカーが表示されているでしょうか。<br>
+実際のGPSセンサーをつなげば、移動体の位置もこれで表示できます。</p>
+<p>ここまでを振り返ってどうでしょう。</p>
+<p>Raspberry Piシミュレータ側は若干コーディングしましたが、<br>
+上がってきたデータの表示が、コーディング無しでできましたね。</p>
+<p>これまでは、データの蓄積や可視化を行うプログラムを作る必要がありましたが<br>
+クラウドサービスを利用すれば、クリックと若干の文字入力で済むので<br>
+サービス開始までの時間が大幅に短縮されます。<br>
+これを使わない手はないですね。</p>
+<h2 id="4-%E3%83%AB%E3%83%BC%E3%83%AB%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">4. ルールを設定してみよう</h2>
+<p>データの受信・可視化ができましたので、それをチェックするルールを設定してみましょう。</p>
+<p>最近は、夏に猛暑日となる機会も増えてきました。<br>
+熱中症を防止するため、温度が35℃を超えたらアラームメールを送信するようにしてみましょう。</p>
+<ol>
+<li>
+<p>デバイステンプレートから、「my-template」を選択してください。</p>
+<img src="img/007/001.png">  
+<br>
+</li>
+</ol>
+<p>「ルール」タブを選択します。</p>
+   <img src="img/007/002.png">
+   <br>
+<ol start="2">
+<li>
+<p>「＋新規」をクリックし、テレメトリを選択します。</p>
+<img src="img/007/003.png">
+<br>
+</li>
+<li>
+<p>以下の入力を行います。<br>
+名前：熱中症注意
+このテンプレートのすべてのデバイスでルールを有効にします：On</p>
+</li>
+<li>
+<p>条件を追加します。「＋」をクリックしてください。</p>
+</li>
+<li>
+<p>測定：テレメトリの「温度」を選択します。</p>
+</li>
+<li>
+<p>集計：なしを選択。</p>
+</li>
+<li>
+<p>演算子：が次の値以上：</p>
+</li>
+<li>
+<p>しきい値：35 を入力します。</p>
+</li>
+<li>
+<p>「保存」をクリックして保存します。</p>
+<img src="img/007/004.png">
+<br>
+</li>
+</ol>
+<p>続いて、アクションを設定します。</p>
+<ol>
+<li>
+<p>アクションを追加します。「＋」をクリックしてください。</p>
+<img src="img/007/005.png">
+<br>
+</li>
+<li>
+<p>右側に実行可能なアクションが表示されますので、「電子メール」を選択してください。</p>
+<img src="img/007/006.png">
+<br>
+</li>
+<li>
+<p>電子メール アクションを構成します。以下の入力をしてください。</p>
+<ul>
+<li>表示名：熱中症注意</li>
+<li>終了：通知先メールアドレス (携帯電話のメールをセットしてみてください)</li>
+<li>メモ：気温が35℃を超えました。熱中症に注意してください。</li>
+</ul>
+<img src="img/007/007.png">
+<br>
+</li>
+<li>
+<p>入力が完了したら、プレビューを確認します。<br>
+問題が無ければ、「保存」をクリックし保存します。<br>
+<img src="img/007/008.png">
+<br></p>
+</li>
+</ol>
+<p>これで、メール送信設定ができました。</p>
+<p>では、実際に送信されるかチェックしてみましょう。</p>
+<p>先程の、<a href="https://azure-samples.github.io/raspberry-pi-web-simulator/#Getstarted">Raspberry Piシミュレータ</a>を表示してください。<br>
+Run状態であれば、一旦Stopしてください。</p>
+<p>確実におくられるよう、送信データを細工します。</p>
+<p><code>getMessage()</code>を以下のように書き換えてください。</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getMessage</span>(<span class="hljs-params">cb</span>) </span>{
+    messageId++;
+    sensor.readSensorData()
+    .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+ 	   cb(<span class="hljs-built_in">JSON</span>.stringify({
+ 		   <span class="hljs-attr">messageId</span>: messageId,
+ 		   <span class="hljs-attr">deviceId</span>: <span class="hljs-string">'Raspberry Pi Web Client'</span>,
+ 		   <span class="hljs-comment">//temperature: data.temperature_C,    // 一旦コメントアウト</span>
+ 		   temperature: <span class="hljs-number">38</span>,	                 <span class="hljs-comment">// 追加。38固定で送信</span>
+ 		   humidity: data.humidity,		
+ 		   <span class="hljs-attr">pressure</span>: data.pressure_hPa * <span class="hljs-number">100</span>,
+ 		   <span class="hljs-attr">assetloc</span>: {<span class="hljs-attr">lon</span>: <span class="hljs-number">140.329948</span>, <span class="hljs-attr">lat</span>: <span class="hljs-number">37.395753</span>}
+ 		}), data.temperature_C &gt; <span class="hljs-number">30</span>);
+ 	})
+ 	.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+ 		<span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Failed to read out sensor data: '</span> + err);
+ 	});
+ }
+</div></code></pre>
+<p>データを送信します。</p>
+<p>メッセージが送信できたら、Stopしてください。<br>
+<strong>止めないとメールがどんどん届くので注意してください</strong>。</p>
+<p>どうですか、届きましたか。</p>
+<p>こういった感じで、送信データをチェックし、状況に応じたアクションを設定できます。<br>
+設定できるアクションは、メールの他にもAzure FunctionsやLogic Appsなどがあります。<br>
+それらを利用すれば、より複雑な制御を行うことも可能ですので、要件に応じ適した<br>
+アクションを設定してください。</p>
+<h2 id="5-%E6%96%99%E9%87%91">5. 料金</h2>
+<p>IoT Centralの料金ですが、<strong>接続するデバイスが5台までは無料です。</strong><br>
+<strong>1デバイス当たり50,000メッセージ</strong>が含まれます。<br>
+(参考：1分間1メッセージぐらい)</p>
+<p>追加メッセージは100万メッセージあたり￥560です。</p>
+<p>開発には十分です。是非ためしてみてください。</p>
+
+</body>
+</html>
