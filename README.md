@@ -10,13 +10,13 @@ IoT機器からの情報収集・可視化・アラート通知機能を構築�
   - データの可視化 (グラフ表示)
   - ダッシュボードの作成  
   
-  <img src="img/006/007.png" width=50%>
+  <img src="img/006/007.png" width=30%>
 
 - 温度が35℃を超えたら「熱中症注意」のメールを送信。  
   - ルールの設定  
   - アクションの設定  
   
-  <img src="img/007/008.png" width=50%>
+  <img src="img/007/008.png" width=30%>
 
 ## 2. IoT Central Applicationを使ってみよう
 
