@@ -24,14 +24,13 @@ Microsoftアカウントをお持ちでない方は、以下の方法で作成�
 
 **[新しい Microsoft アカウントを作成する方法](https://support.microsoft.com/ja-jp/help/4026324/microsoft-account-how-to-create)**
 
-1. Microsoftアカウントを作成します。
-   - [Microsoftアカウント](https://account.microsoft.com/account/Account?refd=support.microsoft.com&ru=https%3A%2F%2Faccount.microsoft.com%2F%3Frefd%3Dsupport.microsoft.com&destrt=home-index) のページにアクセスします。
+1. Microsoftアカウントを作成します。  
+  [Microsoftアカウント](https://account.microsoft.com/account/Account?refd=support.microsoft.com&ru=https%3A%2F%2Faccount.microsoft.com%2F%3Frefd%3Dsupport.microsoft.com&destrt=home-index) のページにアクセスします。
 
 2. 「Microsoftアカウントの作成」をクリックします。(下記図の赤枠部分)  
 <img src="account/microsoft/001.png" width=50%>
-※メール確認
 
-3. アカウント登録に使用するメールアドレスを入力し「次へ」をクリックします。
+3. アカウント登録に使用するメールアドレスを入力し「次へ」をクリックします。  
 <img src="account/microsoft/002.png" width=50%>
 
 4. パスワードを入力し「次へ」をクリックします。
@@ -39,37 +38,37 @@ Microsoftアカウントをお持ちでない方は、以下の方法で作成�
 
 5. 先程入力したメールアドレス宛に、メールが届きます。  
    メール本文に「セキュリティコード」が記載されていますので、  
-   そのコードを入力します。入力したら「次へ」をクリックします。
+   そのコードを入力します。入力したら「次へ」をクリックします。  
 <img src="account/microsoft/004.png" width=50%>
-下記のようなメールが送信されますので、セキュリティーコードを入力してください。
+下記のようなメールが送信されますので、セキュリティーコードを入力してください。  
 <img src="account/microsoft/mail.png" width=50%>
 
-6. 表示されたイメージの文字を入力し「次へ」をクリックしてください。
+6. 表示されたイメージの文字を入力し「次へ」をクリックしてください。  
 <img src="account/microsoft/005.png" width=50%>
 
 7. これでMicrosoftアカウントが作成されます。  
-   作成が完了するとMicrosoftアカウントの画面に遷移します。
+   作成が完了するとMicrosoftアカウントの画面に遷移します。  
 <img src="account/microsoft/006.png" width=50%>
 
 8. 支払い方法を設定します。  
-   「支払い方法を設定する」(下記赤枠部分)をクリックします。
+   「支払い方法を設定する」(下記赤枠部分)をクリックします。  
 <img src="account/microsoft/007.png" width=50%>
 
 ※以降、ここではクレジットカード/デビットカードによる支払い設定について記載します。
 
 9. 「クレジットカード/デビットカード」を選択。  
-   「購入地」から "日本"を選択し、「次へ」をクリックします。
+   「購入地」から "日本"を選択し、「次へ」をクリックします。  
 <img src="account/microsoft/008.png" width=50%>
 
-10. 「名」、「姓」、「メールアドレス」を入力し、「次へ」をクリックします。
+10. 「名」、「姓」、「メールアドレス」を入力し、「次へ」をクリックします。  
 <img src="account/microsoft/009.png" width=50%>
 
 11. カード情報及び住所について入力します。  
-    入力が完了したら、「保存」をクリックします。
+    入力が完了したら、「保存」をクリックします。  
 <img src="account/microsoft/010.png" width=50%>
 
-12. 登録が完了すると、登録内容が表示されますので確認してください。  
-    入力に誤りがあった場合は、「情報を編集します」をクリックし訂正してください。
+12.  登録が完了すると、登録内容が表示されますので確認してください。  
+    入力に誤りがあった場合は、「情報を編集します」をクリックし訂正してください。  
 <img src="account/microsoft/011.png" width=50%>
 
 以上で、Microsoftアカウントの作成は完了です。
