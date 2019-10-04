@@ -41,9 +41,9 @@ Microsoftアカウントをお持ちでない方は、以下の方法で作成�
    そのコードを入力します。入力したら「次へ」をクリックします。  
 <img src="account/microsoft/004.png" width=50%><br>
 下記のようなメールが送信されますので、セキュリティーコードを入力してください。  
-<img src="account/microsoft/mail.png" width=50%>
+<img src="account/microsoft/mail.png">
 
-6. 表示されたイメージの文字を入力し「次へ」をクリックしてください。  
+1. 表示されたイメージの文字を入力し「次へ」をクリックしてください。  
 <img src="account/microsoft/005.png" width=50%>
 
 7. これでMicrosoftアカウントが作成されます。  
@@ -109,7 +109,7 @@ Microsoftアカウント または GitHubアカウントがあれば、Azureの�
 <img src="account/azure/008.png" width=50%><br>
    これで、Azureを利用が可能となりました。  
    無料クレジット(￥22,500)が付与されますので、十分活用してください。  
-<img src="account/azure/009.png" width=50%>
+<img src="account/azure/009.png">
 
 ----
 
