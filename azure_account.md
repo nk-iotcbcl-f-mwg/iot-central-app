@@ -33,13 +33,13 @@ Microsoftアカウントをお持ちでない方は、以下の方法で作成�
 3. アカウント登録に使用するメールアドレスを入力し「次へ」をクリックします。  
 <img src="account/microsoft/002.png" width=50%>
 
-4. パスワードを入力し「次へ」をクリックします。
+4. パスワードを入力し「次へ」をクリックします。  
 <img src="account/microsoft/003.png" width=50%>
 
 5. 先程入力したメールアドレス宛に、メールが届きます。  
    メール本文に「セキュリティコード」が記載されていますので、  
    そのコードを入力します。入力したら「次へ」をクリックします。  
-<img src="account/microsoft/004.png" width=50%>
+<img src="account/microsoft/004.png" width=50%><br>
 下記のようなメールが送信されますので、セキュリティーコードを入力してください。  
 <img src="account/microsoft/mail.png" width=50%>
 
@@ -82,33 +82,33 @@ Microsoftアカウント または GitHubアカウントがあれば、Azureの�
 以下に、その作成方法を記載します。
 
 1. [Azure無料アカウント作成](https://azure.microsoft.com/ja-jp/free/search/?&ef_id=EAIaIQobChMI2crM0KCC5QIVC66WCh2gjQHjEAAYASAAEgKg6PD_BwE:G:s&OCID=AID2000091_SEM_KFOIV6YM&MarinID=KFOIV6YM_324588349914_azure%20%E7%84%A1%E6%96%99_e_c__64173009755_aud-390212648331:kwd-439757288598&lnkd=Google_Azure_Brand&dclid=CMCAvdGgguUCFQxivQodLJUGwg)のページにアクセスします。  
-「無料で始める」をクリックしてください。
+「無料で始める」をクリックしてください。  
 <img src="account/azure/001.png" width=50%>
 
 2. Microsoftアカウントのメールアドレスを入力し「次へ」をクリックします。  
-   (GitHubアカウント利用する場合は、「GitHubアカウントでサインイン」を選択してください)
+   (GitHubアカウント利用する場合は、「GitHubアカウントでサインイン」を選択してください)  
 <img src="account/azure/002.png" width=50%>
 
 3. パスワードを入力し「次へ」をクリックします。  
 <img src="account/azure/003.png" width=50%>
 
-4. 氏名・メールアドレス・電話番号等を入力し、「次へ」をクリックします。
+4. 氏名・メールアドレス・電話番号等を入力し、「次へ」をクリックします。  
 <img src="account/azure/004.png" width=50%>
 
 5. クレジットカードによる本人確認を行います。  
-   各種情報を入力し、「次へ」をクリックします。
+   各種情報を入力し、「次へ」をクリックします。  
 <img src="account/azure/005.png" width=50%>
 
 6. 規約に同意し、「サインアップ」をクリックします。  
-   (情報の受け取りは、任意ですので必要に応じ選択してください。)
+   (情報の受け取りは、任意ですので必要に応じ選択してください。)  
 <img src="account/azure/006.png" width=50%>
 
 7. 登録が完了すると、以下の画面が表示されます。  
 <img src="account/azure/007.png" width=50%>
-   「ポータルに移動」をクリックすると、Azureのポータル画面に移動します。
+   「ポータルに移動」をクリックすると、Azureのポータル画面に移動します。  
 <img src="account/azure/008.png" width=50%>
-   これで、Azureを利用が可能となりました。
-   無料クレジット(￥22,500)が付与されますので、十分活用してください。
+   これで、Azureを利用が可能となりました。  
+   無料クレジット(￥22,500)が付与されますので、十分活用してください。  
 <img src="account/azure/009.png" width=50%>
 
 ----
