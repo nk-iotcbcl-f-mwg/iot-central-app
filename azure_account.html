@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>azure_account.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="azure-%E7%84%A1%E6%96%99%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90">Azure 無料アカウントの作成</h1>
+<h2 id="azure-%E7%84%A1%E6%96%99%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90">Azure 無料アカウントの作成</h2>
+<p>Azureを利用するにあたっては、アカウントの作成が必要となります。</p>
+<p>Azureでは無料アカウントを作成することが出来ます。</p>
+<p><strong>特徴</strong></p>
+<ul>
+<li>12か月間の無料アクセス</li>
+<li>サインアップから最初の30日間で使用できる￥22,500のクレジット</li>
+<li>25を超える常時無料製品へのアクセス</li>
+</ul>
+<p><strong>アカウント作成に必要なもの</strong></p>
+<ul>
+<li>電話番号</li>
+<li>クレジットカード または デビットカード</li>
+<li>Microsoftアカウント または GitHubアカウント</li>
+</ul>
+<p>Microsoftアカウントをお持ちでない方は、以下の方法で作成してください。</p>
+<hr>
+<p><strong><a href="https://support.microsoft.com/ja-jp/help/4026324/microsoft-account-how-to-create" target="_blank">新しい Microsoft アカウントを作成する方法</a></strong></p>
+<ol>
+<li>
+<p>Microsoftアカウントを作成します。</p>
+<ul>
+<li><a href="https://account.microsoft.com/account/Account?refd=support.microsoft.com&amp;ru=https%3A%2F%2Faccount.microsoft.com%2F%3Frefd%3Dsupport.microsoft.com&amp;destrt=home-index" target="_blank">Microsoftアカウント</a> のページにアクセスします。</li>
+</ul>
+</li>
+<li>
+<p>「Microsoftアカウントの作成」をクリックします。(下記図の赤枠部分)<br>
+<img src="account/microsoft/001.png" width=50%>
+※メール確認</p>
+</li>
+<li>
+<p>アカウント登録に使用するメールアドレスを入力し「次へ」をクリックします。
+<img src="account/microsoft/002.png" width=50%></p>
+</li>
+<li>
+<p>パスワードを入力し「次へ」をクリックします。
+<img src="account/microsoft/003.png" width=50%></p>
+</li>
+<li>
+<p>先程入力したメールアドレス宛に、メールが届きます。<br>
+メール本文に「セキュリティコード」が記載されていますので、<br>
+そのコードを入力します。入力したら「次へ」をクリックします。
+<img src="account/microsoft/004.png" width=50%>
+下記のようなメールが送信されますので、セキュリティーコードを入力してください。
+<img src="account/microsoft/mail.png" width=50%></p>
+</li>
+<li>
+<p>表示されたイメージの文字を入力し「次へ」をクリックしてください。
+<img src="account/microsoft/005.png" width=50%></p>
+</li>
+<li>
+<p>これでMicrosoftアカウントが作成されます。<br>
+作成が完了するとMicrosoftアカウントの画面に遷移します。
+<img src="account/microsoft/006.png" width=50%></p>
+</li>
+<li>
+<p>支払い方法を設定します。<br>
+「支払い方法を設定する」(下記赤枠部分)をクリックします。
+<img src="account/microsoft/007.png" width=50%></p>
+</li>
+</ol>
+<p>※以降、ここではクレジットカード/デビットカードによる支払い設定について記載します。</p>
+<ol start="9">
+<li>
+<p>「クレジットカード/デビットカード」を選択。<br>
+「購入地」から &quot;日本&quot;を選択し、「次へ」をクリックします。
+<img src="account/microsoft/008.png" width=50%></p>
+</li>
+<li>
+<p>「名」、「姓」、「メールアドレス」を入力し、「次へ」をクリックします。
+<img src="account/microsoft/009.png" width=50%></p>
+</li>
+<li>
+<p>カード情報及び住所について入力します。<br>
+入力が完了したら、「保存」をクリックします。
+<img src="account/microsoft/010.png" width=50%></p>
+</li>
+<li>
+<p>登録が完了すると、登録内容が表示されますので確認してください。<br>
+入力に誤りがあった場合は、「情報を編集します」をクリックし訂正してください。
+<img src="account/microsoft/011.png" width=50%></p>
+</li>
+</ol>
+<p>以上で、Microsoftアカウントの作成は完了です。</p>
+<hr>
+<p><strong><a href="https://azure.microsoft.com/ja-jp/free/search/?&amp;ef_id=EAIaIQobChMI2crM0KCC5QIVC66WCh2gjQHjEAAYASAAEgKg6PD_BwE:G:s&amp;OCID=AID2000091_SEM_KFOIV6YM&amp;MarinID=KFOIV6YM_324588349914_azure%20%E7%84%A1%E6%96%99_e_c__64173009755_aud-390212648331:kwd-439757288598&amp;lnkd=Google_Azure_Brand&amp;dclid=CMCAvdGgguUCFQxivQodLJUGwg" target="_blank">Azure無料アカウント作成</a></strong></p>
+<p>Microsoftアカウント または GitHubアカウントがあれば、Azureの無料アカウントの作成が可能です。</p>
+<p>以下に、その作成方法を記載します。</p>
+<ol>
+<li>
+<p><a href="https://azure.microsoft.com/ja-jp/free/search/?&amp;ef_id=EAIaIQobChMI2crM0KCC5QIVC66WCh2gjQHjEAAYASAAEgKg6PD_BwE:G:s&amp;OCID=AID2000091_SEM_KFOIV6YM&amp;MarinID=KFOIV6YM_324588349914_azure%20%E7%84%A1%E6%96%99_e_c__64173009755_aud-390212648331:kwd-439757288598&amp;lnkd=Google_Azure_Brand&amp;dclid=CMCAvdGgguUCFQxivQodLJUGwg" target="_blank">Azure無料アカウント作成</a>のページにアクセスします。<br>
+「無料で始める」をクリックしてください。
+<img src="account/azure/001.png" width=50%></p>
+</li>
+<li>
+<p>Microsoftアカウントのメールアドレスを入力し「次へ」をクリックします。<br>
+(GitHubアカウント利用する場合は、「GitHubアカウントでサインイン」を選択してください)
+<img src="account/azure/002.png" width=50%></p>
+</li>
+<li>
+<p>パスワードを入力し「次へ」をクリックします。<br>
+<img src="account/azure/003.png" width=50%></p>
+</li>
+<li>
+<p>氏名・メールアドレス・電話番号等を入力し、「次へ」をクリックします。
+<img src="account/azure/004.png" width=50%></p>
+</li>
+<li>
+<p>クレジットカードによる本人確認を行います。<br>
+各種情報を入力し、「次へ」をクリックします。
+<img src="account/azure/005.png" width=50%></p>
+</li>
+<li>
+<p>規約に同意し、「サインアップ」をクリックします。<br>
+(情報の受け取りは、任意ですので必要に応じ選択してください。)
+<img src="account/azure/006.png" width=50%></p>
+</li>
+<li>
+<p>登録が完了すると、以下の画面が表示されます。<br>
+<img src="account/azure/007.png" width=50%>
+「ポータルに移動」をクリックすると、Azureのポータル画面に移動します。
+<img src="account/azure/008.png" width=50%>
+これで、Azureを利用が可能となりました。
+無料クレジット(￥22,500)が付与されますので、十分活用してください。
+<img src="account/azure/009.png" width=50%></p>
+</li>
+</ol>
+<hr>
+<p>Azure 無料アカウントに関するFAQはこちらから
+<strong><a href="https://azure.microsoft.com/ja-jp/free/free-account-faq/" target="_blank">Azure 無料アカウントFAQ</a></strong></p>
+
+</body>
+</html>

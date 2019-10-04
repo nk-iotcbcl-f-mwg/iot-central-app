@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>ハンズオン：Azure IoT Central App.</title>
+<title>index.md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
 <style>
@@ -386,6 +386,24 @@ blockquote {
 </head>
 <body>
 <h1 id="azure-iot-central-application-%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3">Azure IoT Central Application ハンズオン</h1>
+<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
+<p>今回のハンズオンでは、Azureを利用します。
+Azureアカウントをお持ちでない方は、まずAzureの無料アカウントを作成しましょう。
+この無料アカウントは文字通り無料ですが、魅力的な内容となっています。</p>
+<ul>
+<li>12か月間の無料アクセス</li>
+<li>サインアップから最初の30日間で使用できる￥22,500のクレジット</li>
+<li>25を超える常時無料製品へのアクセス</li>
+</ul>
+<p>アカウント作成には、以下が必要となります。</p>
+<ul>
+<li>電話番号</li>
+<li>クレジットカード または デビットカード</li>
+<li>Microsoftアカウント または GitHubアカウント</li>
+</ul>
+<p>新規にAzureの無料アカウントを作成する場合は、以下のリンクをクリックしてください。
+Microsoftアカウント、Azure無料ア_カウントの作成方法について説明します。
+<a href="https://nk-iotcbcl-f-mwg.github.io/iot-central-app/azure_account.html" target="_blank">Azureの無料アカウント作成</a></p>
 <h2 id="1-%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3-%E5%86%85%E5%AE%B9">1. ハンズオン 内容</h2>
 <p>Azure IoT Central Applicationを利用して、<br>
 IoT機器からの情報収集・可視化・アラート通知機能を構築します。</p>
@@ -907,8 +925,8 @@ azure関連のライブラリや、センサーとして使用するBME280に関
 AzureではIoT機器の接続に関して、SDKを用意しています。
 こうしたSDKを利用することで、面倒なプログラミングをせずとも<br>
 容易にサービスを利用できるようになります。
-サンプルも公開されていますので、うまく活用してください。
-とりあえず試して結果を得るまでの速さを体験してください。</p>
+サンプルも公開されていますので、うまく活用しましょう。
+「とりあえず試してみる」そして「結果を得る」までの速さを体験してください。</p>
 <blockquote>
 <p>Azure IoT Hub SDK の概要と使用方法<br>
 https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-devguide-sdks</p>
@@ -938,7 +956,7 @@ https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-devguide-sdks</p>
 もうお気づきですね、これを先程作成したIoT Centralへの接続文字列に置き換えます。
 なお、プロトコルは7行目でMqttに設定しています。
 MQTT(Message Queueing Telemetry Transport)は、
-「 一つが小さい」メッセージを「大量」に「低遅延」「双方向」で通信することにむいています。
+「 一つが小さい」メッセージを「大量」に「低遅延」「双方向」で通信することに向いています。
 まさにIoT向けですね。
 Azureでは他にもAMQPにも対応しています。
 時間があれば調べてみてください。</p>
@@ -1103,7 +1121,7 @@ Azureでは他にもAMQPにも対応しています。
 </ol>
 <p>これで、メール送信設定ができました。</p>
 <p>では、実際に送信されるかチェックしてみましょう。</p>
-<p>先程の、<a href="https://azure-samples.github.io/raspberry-pi-web-simulator/#Getstarted">Raspberry Piシミュレータ</a>を表示してください。<br>
+<p>先程の、<a href="https://azure-samples.github.io/raspberry-pi-web-simulator/#Getstarted" target="_blank">Raspberry Piシミュレータ</a>を表示してください。<br>
 Run状態であれば、一旦Stopしてください。</p>
 <p>確実におくられるよう、送信データを細工します。</p>
 <p><code>getMessage()</code>を以下のように書き換えてください。</p>
