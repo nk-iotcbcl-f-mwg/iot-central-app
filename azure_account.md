@@ -104,9 +104,9 @@ Microsoftアカウント または GitHubアカウントがあれば、Azureの�
 <img src="account/azure/006.png" width=50%>
 
 7. 登録が完了すると、以下の画面が表示されます。  
-<img src="account/azure/007.png" width=50%>
+<img src="account/azure/007.png" width=50%><br>
    「ポータルに移動」をクリックすると、Azureのポータル画面に移動します。  
-<img src="account/azure/008.png" width=50%>
+<img src="account/azure/008.png" width=50%><br>
    これで、Azureを利用が可能となりました。  
    無料クレジット(￥22,500)が付与されますので、十分活用してください。  
 <img src="account/azure/009.png" width=50%>
